@@ -437,7 +437,7 @@ pub fn register_plugins(reg: &mut rustc_plugin::Registry<'_>, conf: &Conf) {
     reg.register_late_lint_pass(box ptr::PointerPass);
     reg.register_late_lint_pass(box needless_bool::NeedlessBool);
     reg.register_late_lint_pass(box needless_bool::BoolComparison);
-    reg.register_late_lint_pass(box approx_const::Pass);
+    reg.register_late_lint_pass(box approx_const::ApproxConstant);
     reg.register_late_lint_pass(box misc::Pass);
     reg.register_early_lint_pass(box precedence::Precedence);
     reg.register_early_lint_pass(box needless_continue::NeedlessContinue);
